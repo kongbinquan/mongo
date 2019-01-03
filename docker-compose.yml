@@ -1,0 +1,13 @@
+version: '3'
+services: 
+  mongo:
+    image: kbqallan/mongo:3.6.4
+    network_mode: host
+    container_name: mongodb
+    restart: always
+    privileged: true
+    ports:
+     - 27017:27017
+    volumes:
+     - /data/db:/data/db
+     - /usr/share/zoneinfo/Etc/GMT-4:/etc/localtime:ro
